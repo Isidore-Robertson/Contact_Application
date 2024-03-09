@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+		<title>Contacto</title>
+     <!-- <link rel="icon" type="image/x-icon" href="/static/tabICN.ico"> -->
+		<link rel="stylesheet" href="static\style.css">
+		
+    </head>
+    <body>
+        <div class="header">
+            <img src="static\CS204b_logo.png" class="logo" alt="logo">
+        </div>
+      <div class="center">
+        <h1>Login</h1>
+        <form method="POST">
+            <div class="txt_field">
+              <input type="text" name="email" required>
+              <span></span>
+                <label>Email</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" name="password" required>
+                <span></span>
+                <label>Password</label>
+            </div>
+            <div class="pass">Forgot Password </div>
+            {% for mesg in get_flashed_messages() %}
+                <h1>{{ mesg }}</h1>
+            {% endfor %}
+            <input type="submit" value="Login" name="Submit">
+            <div class="signup_link">
+              Not a member?<a href="{{url_for('registerForm')}}">Signup</a>
+            </div>
+        </form>
+      </div>
+        
+    </body>
+
+
+
+
+
+</html>

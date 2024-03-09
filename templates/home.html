@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+		<title>Contacto</title>
+     <!-- <link rel="icon" type="image/x-icon" href="/static/tabICN.ico"> -->
+		<link rel="stylesheet" href="static\style.css">
+
+    </head>
+    <body>
+        <div class="header">
+            <img src="static\CS204b_logo.png" class="logo" alt="logo">
+            <a href="{{url_for('logout')}}"> <button type="button" class="btn large btn-outline-success" id="logout">LOG OUT</button></a>
+        </div>
+        <div>
+            <h1>
+                Welcome to the internet {{ current_user.f_name }}, have a look around ;)
+            </h1>
+            <p class="text-center"><a href="{{('view')}}"><button type="button" class="btn large btn-outline-success">View Contacts</button>  </a>  </p> <br>
+            <p class="text-center"><a href="{{('adduser')}}"><button type="button" class="btn large btn-outline-success">Add Contacts</button> </a>  </p> <br>
+        </div>
+    </body>
+
+
+
+
+
+</html>
